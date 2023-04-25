@@ -1,9 +1,6 @@
 # AzureProjekti
 ## IoT ja BigData kurssin projekti
 
-Kaksi koodin pätkää yhdistettynä ja muokattuna
-
-![koodi](https://user-images.githubusercontent.com/102190520/234364435-98707e49-d8bc-4b2b-af94-dfb15513afcf.png)
 
 
 
