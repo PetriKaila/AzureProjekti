@@ -1,7 +1,7 @@
 import requests, json, time
 
 # Enter your API key here
-api_key = "51c8c3fbf02769e5eb1fd567b3555e0d"
+api_key = "<Your API Key here>"
 
 # base_url variable to store url
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -16,7 +16,7 @@ complete_url = base_url + "appid=" + api_key + "&q=" + city_name + "&units=metri
 
 from azure.iot.device import IoTHubDeviceClient, Message
 
-CONNECTION_STRING = "HostName=Projektihubi.azure-devices.net;DeviceId=raspberry-pi;SharedAccessKey=iQHZUy8uPKizBA5RyivpOSSLcBVDubHk7XtjlWQtcaE="
+CONNECTION_STRING = "<Add Connection Sting>"
 
 # Define the JSON message to send to IoT Hub.
 MSG_TXT = '{{{city_name}: {current_temperature}}}'
