@@ -6,7 +6,7 @@ api_key = "<Your API Key here>"
 # base_url variable to store url
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
-# Give city name
+# Kalajoki kovakoodattuna
 city_name = "Kalajoki"
 
 # complete_url variable to store
