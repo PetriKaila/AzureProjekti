@@ -13,7 +13,7 @@ Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollu
 
 Netistä saaduilla ohjeilla ja tiedosto rungoilla saimme tehtyä toimivan [python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodin, millä saamme OpenWeatherMapista kerättyä dataa Raspberrylle. OpenWeatherMap tarjoaa tähän tarkoitukseen sopivan APIn. Sieltä pystyimme valitsemaan paikaksi Kalajoen, koska Petri halusi seurata paikkakuntansa lämpötilaa.
 
-![projekti (3)](https://user-images.githubusercontent.com/102190520/234664634-7f8825e3-f99c-4530-80c3-5265a70104c7.png)
+![projekti](https://user-images.githubusercontent.com/102190520/234664634-7f8825e3-f99c-4530-80c3-5265a70104c7.png)
 
 Tarvittiin kyllä paljon verta hikeä ja kyyneliä, jotta saimme [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodit yhdistettyä ja toimimaan haluamallamme tavalla.
 
@@ -21,7 +21,7 @@ Tarvittiin kyllä paljon verta hikeä ja kyyneliä, jotta saimme [Python](https:
 
 Raspberrya käytämme välissä siksi, koska se kuluttaa vähemmän sähköä verrattuna oikeaan tietokoneeseen, eikä sido tietokoneen omia resursseja. Raspberry toimii IoT laitteena. Näin myös ohjelma pysyy toiminnassa tietokoneen tilasta huolimatta. OpenWeatherMap tarjoaa kyllä myös paljon muutakin tietoa, mutta tähän meidän tarkoitukseemme ajattelimme lämpötiladatan riittävän.
 
-![projekti (2)](https://user-images.githubusercontent.com/102190520/234664633-10ffc090-4d03-4bd6-a598-8d479fc4703c.png)
+![projekti](https://user-images.githubusercontent.com/102190520/234664633-10ffc090-4d03-4bd6-a598-8d479fc4703c.png)
 
 
 
@@ -35,7 +35,7 @@ Vaikeaa oli saada alun perin data hyppäämään Raspberrysta Azureen. Datan muo
 
 Tämän jälkeen astuu kuvioon big datan lambda arkkitehtuuri, jonka mukaisesti rakensimme datalle cold path käsittelyn siten, että hyödynsimme siihen Azuren Data Factoryn Pipelinea. Pipeline louhii dataa blob storagen masterdatabasesta ja aggregaattorifunktion avulla siirtää haluamaamme tietoa tarjoilukerroksen NoSQL-databaseen, jonka toteutimme CosmosDB:llä. Tämän jälkeen dataa voisi tarjoilukerroksesta jakaa, vaikka verkkosivulle tai sovellukselle, mutta tähän meillä ei aika tässä työssä riitä.
 
-![projekti (4)](https://user-images.githubusercontent.com/102190520/234664637-7888e5bb-fce3-4b32-8f8a-b476d9d37b8f.png)
+![projekti](https://user-images.githubusercontent.com/102190520/234664637-7888e5bb-fce3-4b32-8f8a-b476d9d37b8f.png)
 
 Ei sekään kuitenkaan aivan ajatuksen voimalla sujunut. Saimmepa opettajankin ihmettelemään pitkän aikaa meidän datamme käyttäytymistä. Datalle oli vaikeaa mennä pipelinen läpi sinkiin. Tämän ongelman saimme ratkaistua opettajan kanssa tunnilla tuumittuamme. Tunnillakin kuitenkin mielenkiintoisesti alkuun kaikki data oli hukassa, toisin kuin aiemmin olimme dataa Azuressa nähneet. Onneksi tämäkin saatiin selvitettyä ja näin saimme työmme tehtyä loppuun asti.
 
@@ -45,7 +45,7 @@ Jatkokehitysideoita miettiessämme meillä heräsi ajatus siitä, että haluaisi
 
 Työn tekemistä edes auttoi paljon, että löysimme Azuresta IAM ominaisuuden, millä pystyimme jakamaan Azuressa tehtäviä juttuja keskenämme. Näin saimme kaikki yhtäläisen pääsyn esimerkiksi IoT Hubiimme.
 
-![projekti (1)](https://user-images.githubusercontent.com/102190520/234664628-93c8825a-1961-4bac-8613-8fda230eb09a.png)
+![projekti](https://user-images.githubusercontent.com/102190520/234664628-93c8825a-1961-4bac-8613-8fda230eb09a.png)
 
 Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
 
