@@ -1,3 +1,8 @@
+# Azure IoT harjoitustehtävä 
+
+## (Petri Kaila, Piia Virrankosi, Jere Jämsä)
+
+
 Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma hakee OpenWeatherMap palvelusta Kalajoen lämpötiloja ja tietyin välein niitä putkahtelee sieltä Azureen.
 
 Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa, sillä meitä nyt sattuu Kalajoen sää kiinnostamaan. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin rakentamaan pipelineamme.
