@@ -1,4 +1,4 @@
-#Azure IoT harjoitustehtävä
+# Azure IoT harjoitustehtävä (Petri Kaila, Piia Virrankosi, Jere Jämsä)
 
 Rakensimme iot hubin, jonne saimme dataa rasberry piltä. Rasberryn ohjelma hakee OpenWeatherMap palvelusta Kalajoen lämpötiloja ja tietyin välein niitä putkahtelee sieltä Azureen. Azuren pipeline lähettää tavarat databaseen talteen.
 
