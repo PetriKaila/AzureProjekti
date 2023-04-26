@@ -1,4 +1,4 @@
-Azure IoT harjoitustehtävä
+#Azure IoT harjoitustehtävä
 
 Rakensimme iot hubin, jonne saimme dataa rasberry piltä. Rasberryn ohjelma hakee OpenWeatherMap palvelusta Kalajoen lämpötiloja ja tietyin välein niitä putkahtelee sieltä Azureen. Azuren pipeline lähettää tavarat databaseen talteen.
 
@@ -10,25 +10,25 @@ Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollu
 
 Netistä saaduilla ohjeilla ja tiedosto rungoilla saimme tehtyä toimivan python koodin, millä saamme OpenWeatherMapista kerättyä dataa rasberrylle. OpenWeatherMap tarjoaa tähän tarkoitukseen sopivan APIn. Sieltä pystyimme valitsemaan paikaksi Kalajoen, joten nyt saamme Kalajoen lämpötiladataa.
 
-![Kuva1](F:\petri\Pictures\Kuva1.png)
+![Kuva1](https://user-images.githubusercontent.com/102190520/234653284-50674071-811f-4843-b412-b6107a0bd9d2.png)
 
 Tarvittiin kyllä paljon verta hikeä ja kyyneliä, jotta saimme Python ohjelman toimimaan haluamallamme tavalla.
 
 Rasberryä käytämme välissä siksi, koska se kuluttaa vähemmän sähköä verrattuna oikeaan tietokoneeseen, eikä sido tietokoneen omia resursseja. Rasberry toimii IoT laitteena. Näin myös ohjelma pysyy toiminnassa tietokoneen tilasta huolimatta. OpenWeatherMap tarjoaa kyllä myös paljon muutakin tietoa, mutta tähän meidän tarkoitukseen ajattelimme lämpötiladatan riittävän.
 
-![Kuva2](F:\petri\Pictures\Kuva2.png)
+![Kuva2](https://user-images.githubusercontent.com/102190520/234653480-d500dc85-9547-45cb-8bad-65c9f7524553.png)
 
 Python ohjelman kokosimme yhdistelemällä erilaisia valmiita malleja netistä. Koodimme koostuu usean lähteen johdosta eri osioista, mutta raakasti olemme muokanneet kaikkia koodeja. Enää ei ole meidän lopullisessa ohjelmassamme montaa riviä alkuperäisiä netistä löydettyjä python-skriptejä.
 
-![Kuva3](F:\petri\Pictures\Kuva3.png)
+![Kuva3](https://user-images.githubusercontent.com/102190520/234653598-d8819c2e-3b65-4dcb-a5a9-3e354a55d169.png)
 
 Vaikeata oli saada alunperin data hyppäämään rasberrystä Azureen. Datan muoto myös oli ongelmallinen, sillä Azure ei oikein ymmärrä Base64 Muotoa. Tähän meitä auttoi löytämämme koodi rivi, jolla datan saa muutettua Azuren paremmin tukemaan Json muotoon.
 
-![Kuva4](F:\petri\Pictures\Kuva4.png)
+![Kuva4](https://user-images.githubusercontent.com/102190520/234653718-75ea17c8-da6b-4289-9cf5-a00a3dedd0c7.png)
 
 Datan saatuamme tulemaan Azureen mietimme, mitä me sillä datalla nyt tekisimmekään. Tutkimme erilaisia vaihtoehtoja ja opettajan esimerkin innoittamana päätimme rakentaa Datafactoryn ja pipelinen. Pipeline louhii tietoa eräkerroksen masterdatasta ja vie sitä tarjoilukerroksen NoSql databaseen, joka toteutettiin CosmosDB:llä. Tarjoilukerroksesta datan voi ladata csv-tiedostona ja avata Excelillä.
 
-![Kuva5](F:\petri\Pictures\Kuva5.png)
+
 
 Meidän rakentamamme systeemi on Cold Path, eli masterdatasta louhitaan agregaattorilla näkymiä tarjoilukerrokseen, josta dataa voi siirtää vaikka sovelluksille, verkkosivuille tai mihin tahansa muuhun käyttöön. Tämän tekniikan taustalla on Lambda arkkitehtuuri.
 
