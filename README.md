@@ -7,7 +7,7 @@ Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma h
 
 Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin projektissamme.
 
-Tehtävää tehdessämme monet kerrat olemme nettiä selailleet apuja etsien. Eihän meillä heti alkuun ollut edes tiedossa, kuinka saamme dataa edes kerättyä. Kokeilimme alkuun jopa puhelinta käyttää mittalaitteena, mutta kun se ei onnistunutkaan, päädyimme käyttämään OpenWeatherin tarjoamaa APIa. Siellä voi rakentaa APIn joka tarjoaa projektiin tarvittavan datan. Me valitsimme lämpötilan.
+Tehtävää tehdessämme monet kerrat olemme nettiä selailleet apuja etsien. Eihän meillä heti alkuun ollut edes tiedossa, kuinka saamme dataa edes kerättyä. Yhtenä vaihtoehtona mietimme myös simuloidun datan hakemista Ilmatieteenlaitokselta. Kokeilimme alkuun jopa puhelinta käyttää mittalaitteena, mutta kun se ei onnistunutkaan, päädyimme käyttämään OpenWeatherin tarjoamaa APIa. Siellä voi rakentaa APIn joka tarjoaa projektiin tarvittavan datan. Me valitsimme lämpötilan.
 
 Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollut Python-koodausta, mutta tässä APIn kanssa Python-ohjelma tuntui olevan tässä vaiheessa paras vaihtoehto kerätä dataa, kun tarpeeksi googlailtuemme löysimme pari Python koodia, toinen keräsi dataa OpenWeatherista ja toinen lähetti dataa IoT Hubiin. Näin tuli opittua vähän lisää uudesta ja kurssin ulkopuolisesta asiasta.
 
@@ -38,7 +38,7 @@ Tämän jälkeen astuu kuvioon big datan lambda arkkitehtuuri, jonka mukaisesti 
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664637-7888e5bb-fce3-4b32-8f8a-b476d9d37b8f.png)
 
-Ei sekään kuitenkaan aivan ajatuksen voimalla sujunut. Saimmepa opettajankin ihmettelemään pitkän aikaa meidän datamme käyttäytymistä. Datalle oli vaikeaa mennä pipelinen läpi sinkiin. Tämän ongelman saimme ratkaistua opettajan kanssa tunnilla tuumittuamme. Tunnillakin kuitenkin mielenkiintoisesti alkuun kaikki data oli hukassa, toisin kuin aiemmin olimme dataa Azuressa nähneet. Onneksi tämäkin saatiin selvitettyä ja näin saimme työmme tehtyä loppuun asti.
+Ei sekään kuitenkaan aivan ajatuksen voimalla sujunut. Saimmepa tunnilla opettajankin ihmettelemään pitkän aikaa meidän datamme käyttäytymistä. Datalle oli vaikeaa mennä pipelinen läpi sinkiin. Tämän ongelman saimme ratkaistua opettajan kanssa tunnilla tuumittuamme. Tunnillakin kuitenkin mielenkiintoisesti alkuun kaikki data oli hukassa, toisin kuin aiemmin olimme dataa Azuressa nähneet. Onneksi tämäkin saatiin selvitettyä ja näin saimme työmme tehtyä loppuun asti.
 Vika oli siinä, että tein Cosmos DB Containerin jälkikäteen, kun se jostain syystä sieltä oli häipynyt ja näin ollen debuggaus ei onnistunut koska Sink1 container oli väärin asetettu. Virheilmoituksesta ei juuri ollut hyötyä, kun se taisi vain ilmoittaa, että "User configuration error".
 
 Jatkokehitysideoita miettiessämme meillä heräsi ajatus siitä, että haluaisimme tehdä jotakin tällä kaikella tiedolla, mitä me Azureen nyt saamme ja siellä käsittelemme. Erityisesti keskuudestamme nousi idea nettisivusta, tai sovelluksesta, joka näyttäisi joko tämän hetken tai historia tietoa lämpötilasta. Päivän suurin lämpötila-arvo voisi myös olla kätevä saada eroteltua ja ilmoitettua. Tätä tutkiessamme huomasimme, että Azuresta suoraan saa pakattuna ZIP tiedostona arvoja JSON muodossa, mutta se ei tässä oikein auta, sillä erityisesti kiinnostaisi muuten käyttää dataa, kuin kerran ladata. Löysimme Power Bi:n Ajattelimme, että se olisi hyödyllinen tapa saada dataa ulos, mutta muistaakseni se olisi ollut niin kallis ratkaisu, että poistuimme sieltä välittömästi.
@@ -49,7 +49,7 @@ Työn tekemistä edes auttoi paljon, että löysimme Azuresta IAM ominaisuuden, 
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664628-93c8825a-1961-4bac-8613-8fda230eb09a.png)
 
-Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
+Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat sekä miten yritysmaailmassa laajassa käytössä oleva Azure toimii. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
 
 ---
 
