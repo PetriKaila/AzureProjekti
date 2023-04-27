@@ -29,7 +29,8 @@ Alun perin oli vaikeaa saada data siirtymään Raspberrysta Azureen. Datan muoto
 ![image](https://user-images.githubusercontent.com/102190520/234672526-2cc02c19-8433-4a36-a22a-209bb5290f22.png)
 
   
-![image](https://user-images.githubusercontent.com/102190520/234792626-561e1ef8-6039-4984-9eb7-3eb86f868e15.png)
+![Dataa tunnin välein](https://user-images.githubusercontent.com/102190520/234792626-561e1ef8-6039-4984-9eb7-3eb86f868e15.png)
+
 ---
 
 
