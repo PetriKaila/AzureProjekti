@@ -3,31 +3,29 @@
 ## Petri Kaila, Piia Virrankosi, Jere Jämsä
 
 
-Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma hakee OpenWeatherMap palvelusta Kalajoen lämpötiloja ja tietyin välein niitä putkahtelee sieltä Azureen.
+Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma hakee OpenWeather palvelusta Kalajoen lämpötiloja ja tietyin välein niitä putkahtelee sieltä Azureen.
 
-Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa, sillä meitä nyt sattuu Kalajoen sää kiinnostamaan. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin rakentamaan pipelineamme.
+Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin rakentamaan pipelineamme.
 
-Tehtävää tehdessämme monet kerrat olemme nettiä selailleet apuja etsien. Eihän meillä heti alkuun ollut edes tiedossa, kuinka saamme dataa edes kerättyä. Kokeilimme alkuun jopa puhelinta käyttää mittalaitteena, mutta kun se ei onnistunutkaan, päädyimme käyttämään OpenWeatherMapin tarjoamaa API palvelua. Siellä voi rakentaa APIn joka tarjoaa projektiin tarvittavat datat. Me valitsimme lämpötilan.
+Tehtävää tehdessämme monet kerrat olemme nettiä selailleet apuja etsien. Eihän meillä heti alkuun ollut edes tiedossa, kuinka saamme dataa edes kerättyä. Kokeilimme alkuun jopa puhelinta käyttää mittalaitteena, mutta kun se ei onnistunutkaan, päädyimme käyttämään OpenWeatherin tarjoamaa APIa. Siellä voi rakentaa APIn joka tarjoaa projektiin tarvittavan datan. Me valitsimme lämpötilan.
 
 Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollut Python-koodausta, mutta tässä APIn kanssa Python-ohjelma tuntui olevan tässä vaiheessa paras vaihtoehto kerätä dataa, kun tarpeeksi googlailtuemme löysimme pari Python koodia, toinen keräsi dataa OpenWeatherista ja toinen lähetti dataa IoT Hubiin. Näin tuli opittua vähän lisää uudesta ja kurssin ulkopuolisesta asiasta.
 
-Netistä saaduilla ohjeilla ja tiedosto rungoilla saimme tehtyä toimivan [python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodin, millä saamme OpenWeatherMapista kerättyä dataa Raspberrylle. OpenWeatherMap tarjoaa tähän tarkoitukseen sopivan APIn. Sieltä pystyimme valitsemaan paikaksi Kalajoen, koska Petri halusi seurata paikkakuntansa lämpötilaa.
+Näistä kahdesta koodista saimme aikaiseksi toimivan [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodin, millä saamme OpenWeatherista kerättyä dataa Raspberryn kautta IoT Hubiin. Koodiin kovakoodattiin Kalajoki, koska Petri halusi seurata paikkakuntansa lämpötilaa.
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664634-7f8825e3-f99c-4530-80c3-5265a70104c7.png)
 
-Tarvittiin kyllä paljon verta hikeä ja kyyneliä, jotta saimme [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodit yhdistettyä ja toimimaan haluamallamme tavalla.
+Tarvittiin kyllä paljon verta hikeä ja kyyneliä, että saimme [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodit yhdistettyä ja toimimaan haluamallamme tavalla.
 
 ![](https://user-images.githubusercontent.com/102190520/234664854-c09af45d-d8e1-4f3c-8652-ce958af43c1b.png)
 
-Raspberrya käytämme välissä siksi, koska se kuluttaa vähemmän sähköä verrattuna oikeaan tietokoneeseen, eikä sido tietokoneen omia resursseja. Raspberry toimii IoT laitteena. Näin myös ohjelma pysyy toiminnassa tietokoneen tilasta huolimatta. OpenWeatherMap tarjoaa kyllä myös paljon muutakin tietoa, mutta tähän meidän tarkoitukseemme ajattelimme lämpötiladatan riittävän.
+Raspberrya käytämme välissä siksi, koska se kuluttaa vähemmän sähköä verrattuna oikeaan tietokoneeseen, eikä sido tietokoneen omia resursseja. Raspberry toimii IoT laitteena. Näin myös ohjelma pysyy toiminnassa tietokoneen tilasta huolimatta. OpenWeather tarjoaa kyllä myös paljon muutakin tietoa, mutta tähän meidän tarkoitukseemme ajattelimme lämpötiladatan riittävän.
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664633-10ffc090-4d03-4bd6-a598-8d479fc4703c.png)
 
+Koodimme siis koostuu kahdesta esimerkki koodista, jotka yhdistimme ja muokkasimme aikamme, että saimme sen toimivaksi. Enää ei ole meidän lopullisessa ohjelmassamme montaa riviä alkuperäisiä netistä löydettyjä python-skriptejä.
 
-
-Python ohjelman kokosimme yhdistelemällä erilaisia valmiita malleja netistä. Koodimme koostuu usean lähteen johdosta eri osioista, mutta paljon olemme muokanneet koodeja. Enää ei ole meidän lopullisessa ohjelmassamme montaa riviä alkuperäisiä netistä löydettyjä python-skriptejä.
-
-Vaikeaa oli saada alun perin data hyppäämään Raspberrysta Azureen. Datan muoto myös oli ongelmallinen, sillä JSON tiedoston lämpötiladata näkyi Base64 muotona. Tähän löytyi jälleen kerran googlailemalla keino, jolla lämpötila data saatiin selkokieliseksi JSON tiedostoon, lisäämällä sinne python koodiin *content_encoding = "utf-8", content_type = "application/json".*
+Alun perin oli vaikeaa saada data siirtymään Raspberrysta Azureen. Datan muoto myös oli ongelmallinen, sillä JSON tiedoston lämpötiladata näkyi Base64 muotona. Tähän löytyi jälleen kerran googlailemalla keino, jolla lämpötila data saatiin selkokieliseksi JSON tiedostoon, lisäämällä koodiin *content_encoding = "utf-8", content_type = "application/json".*
 
 ![image](https://user-images.githubusercontent.com/102190520/234672526-2cc02c19-8433-4a36-a22a-209bb5290f22.png)
 
