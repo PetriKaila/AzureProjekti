@@ -54,4 +54,5 @@ Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet
 ---
 
 lähteet: Stackoverflow, Microsoft, [Geeksforgeeks OpenWeather koodi](https://www.geeksforgeeks.org/python-find-current-weather-of-any-city-using-openweathermap-api/), [DEV.to datan lähetys](https://dev.to/nihalbaig0/stream-data-to-azure-iot-hub-from-raspberry-pi-1ed3#:~:text=Configuring%20Raspberry%20Pi)
+
 ---
