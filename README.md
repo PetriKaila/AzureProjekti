@@ -9,7 +9,7 @@ Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme t
 
 Tehtävää tehdessämme monet kerrat olemme nettiä selailleet apuja etsien. Eihän meillä heti alkuun ollut edes tiedossa, kuinka saamme dataa edes kerättyä. Yhtenä vaihtoehtona mietimme myös simuloidun datan hakemista Ilmatieteenlaitokselta. Kokeilimme alkuun jopa puhelinta käyttää mittalaitteena, mutta kun se ei onnistunutkaan, päädyimme käyttämään OpenWeatherin tarjoamaa APIa. Siellä voi rakentaa APIn joka tarjoaa projektiin tarvittavan datan. Me valitsimme lämpötilan.
 
-Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollut Python-koodausta, mutta tässä APIn kanssa Python-ohjelma tuntui olevan tässä vaiheessa paras vaihtoehto kerätä dataa, kun tarpeeksi googlailtuemme löysimme pari Python koodia, toinen keräsi dataa OpenWeatherista ja toinen lähetti dataa IoT Hubiin. Näin tuli opittua vähän lisää uudesta ja kurssin ulkopuolisesta asiasta.
+Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollut Python-koodausta, Python-ohjelma tuntui olevan tässä vaiheessa paras vaihtoehto kerätä dataa, kun tarpeeksi googlailtuemme löysimme pari Python koodia, toinen keräsi dataa OpenWeatherista ja toinen lähetti dataa IoT Hubiin. Näin tuli opittua vähän lisää uudesta ja kurssin ulkopuolisesta asiasta.
 
 Näistä kahdesta koodista saimme aikaiseksi toimivan [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodin, millä saamme OpenWeatherista kerättyä dataa Raspberryn kautta IoT Hubiin. IoT hubi reitittää datan Blob storageen. Koodiin kovakoodattiin Kalajoki, koska Petri halusi seurata paikkakuntansa lämpötilaa.
 
