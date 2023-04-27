@@ -46,6 +46,7 @@ Työn tekemistä edes auttoi paljon, että löysimme Azuresta IAM ominaisuuden, 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664628-93c8825a-1961-4bac-8613-8fda230eb09a.png)
 
 Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
+
 ---
 
 lähteet: Stackoverflow, Microsoft, [geeksforgeeks OpenWeather koodi](https://www.geeksforgeeks.org/python-find-current-weather-of-any-city-using-openweathermap-api/), [dev.to datan lähetys](https://dev.to/nihalbaig0/stream-data-to-azure-iot-hub-from-raspberry-pi-1ed3)
