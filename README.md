@@ -3,7 +3,7 @@
 ## Petri Kaila, Piia Virrankoski, Jere Jämsä
 
 
-Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma hakee OpenWeather palvelusta Kalajoen lämpötiloja ja tietyin välein niitä putkahtelee sieltä Azureen.
+Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma hakee OpenWeather palvelusta Kalajoen lämpötilaa ja tunnin välein lähettää sen Azureen.
 
 Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin rakentamaan pipelineamme.
 
@@ -15,15 +15,15 @@ Näistä kahdesta koodista saimme aikaiseksi toimivan [Python](https://github.co
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664634-7f8825e3-f99c-4530-80c3-5265a70104c7.png)
 
-Tarvittiin kyllä paljon verta hikeä ja kyyneliä, että saimme [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodit yhdistettyä ja toimimaan haluamallamme tavalla.
+Tarvittiin kyllä paljon verta hikeä ja kyyneliä, että saimme Python koodit yhdistettyä ja toimimaan haluamallamme tavalla.
 
 ![](https://user-images.githubusercontent.com/102190520/234664854-c09af45d-d8e1-4f3c-8652-ce958af43c1b.png)
 
-Raspberrya käytämme välissä siksi, koska se kuluttaa vähemmän sähköä verrattuna oikeaan tietokoneeseen, eikä sido tietokoneen omia resursseja. Raspberry toimii IoT laitteena. Näin myös ohjelma pysyy toiminnassa tietokoneen tilasta huolimatta. OpenWeather tarjoaa kyllä myös paljon muutakin tietoa, mutta tähän meidän tarkoitukseemme ajattelimme lämpötiladatan riittävän.
+Raspberrya käytämme välissä siksi, koska se kuluttaa vähemmän sähköä verrattuna oikeaan tietokoneeseen, eikä sido tietokoneen omia resursseja. Raspberry toimii IoT laitteena. Näin myös ohjelma pysyy toiminnassa tietokoneen tilasta huolimatta. OpenWeather API tarjoaa kyllä myös paljon muutakin tietoa, mutta tähän meidän tarkoitukseemme ajattelimme lämpötiladatan riittävän.
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664633-10ffc090-4d03-4bd6-a598-8d479fc4703c.png)
 
-Koodimme siis koostuu kahdesta esimerkki koodista, jotka yhdistimme ja muokkasimme aikamme, että saimme sen toimivaksi. Enää ei ole meidän lopullisessa ohjelmassamme montaa riviä alkuperäisiä netistä löydettyjä python-skriptejä.
+Koodimme siis koostuu kahdesta esimerkki koodista, jotka yhdistimme ja muokkasimme aikamme, että saimme sen toimivaksi. Enää ei ole meidän lopullisessa koodissamme ollut montaa riviä alkuperäisiä netistä löydettyjä koodin pätkiä.
 
 Alun perin oli vaikeaa saada data siirtymään Raspberrysta Azureen. Datan muoto myös oli ongelmallinen, sillä JSON tiedoston lämpötiladata näkyi Base64 muotona. Tähän löytyi jälleen kerran googlailemalla keino, jolla lämpötila data saatiin selkokieliseksi JSON tiedostoon, lisäämällä koodiin *content_encoding = "utf-8", content_type = "application/json".*
 
