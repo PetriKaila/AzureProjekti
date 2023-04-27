@@ -28,7 +28,7 @@ Koodimme siis koostuu kahdesta esimerkki koodista, jotka yhdistimme ja muokkasim
 Alun perin oli vaikeaa saada data siirtymään Raspberrysta Azureen. Datan muoto myös oli ongelmallinen, sillä JSON tiedoston lämpötiladata näkyi Base64 muotona. Tähän löytyi jälleen kerran googlailemalla keino, jolla lämpötila data saatiin selkokieliseksi JSON tiedostoon, lisäämällä koodiin *content_encoding = "utf-8", content_type = "application/json".*
 ![image](https://user-images.githubusercontent.com/102190520/234672526-2cc02c19-8433-4a36-a22a-209bb5290f22.png)
 
-Dataa tunnin välein...
+Dataa tunnin välein
 ![image](https://user-images.githubusercontent.com/102190520/234792626-561e1ef8-6039-4984-9eb7-3eb86f868e15.png)
 ---
 
