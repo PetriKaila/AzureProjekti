@@ -5,13 +5,13 @@
 
 Rakensimme IoT hubin, jonne saimme dataa Raspberry PI:ltä. Raspberryn ohjelma hakee OpenWeather palvelusta Kalajoen lämpötilaa ja tunnin välein lähettää sen Azureen.
 
-Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin rakentamaan pipelineamme.
+Tehtävämme alkoi ideoinnista, mitä ihmettä me voisimme tehdä. Päädyimme tutkailemaan erilaisia tapoja saada lämpötiladataa. Tämän jälkeen huomasimme myös opettajamme käsittelevän lämpötiladataa, mikä hivenen auttoi meitä eteenpäin projektissamme.
 
 Tehtävää tehdessämme monet kerrat olemme nettiä selailleet apuja etsien. Eihän meillä heti alkuun ollut edes tiedossa, kuinka saamme dataa edes kerättyä. Kokeilimme alkuun jopa puhelinta käyttää mittalaitteena, mutta kun se ei onnistunutkaan, päädyimme käyttämään OpenWeatherin tarjoamaa APIa. Siellä voi rakentaa APIn joka tarjoaa projektiin tarvittavan datan. Me valitsimme lämpötilan.
 
 Vaikka olemme tietotekniikan opiskelijoita, ei meillä ole vielä ollenkaan ollut Python-koodausta, mutta tässä APIn kanssa Python-ohjelma tuntui olevan tässä vaiheessa paras vaihtoehto kerätä dataa, kun tarpeeksi googlailtuemme löysimme pari Python koodia, toinen keräsi dataa OpenWeatherista ja toinen lähetti dataa IoT Hubiin. Näin tuli opittua vähän lisää uudesta ja kurssin ulkopuolisesta asiasta.
 
-Näistä kahdesta koodista saimme aikaiseksi toimivan [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodin, millä saamme OpenWeatherista kerättyä dataa Raspberryn kautta IoT Hubiin. Koodiin kovakoodattiin Kalajoki, koska Petri halusi seurata paikkakuntansa lämpötilaa.
+Näistä kahdesta koodista saimme aikaiseksi toimivan [Python](https://github.com/PetriKaila/AzureProjekti/blob/main/saa.py) koodin, millä saamme OpenWeatherista kerättyä dataa Raspberryn kautta IoT Hubiin. IoT hubi reitittää datan Blob storageen. Koodiin kovakoodattiin Kalajoki, koska Petri halusi seurata paikkakuntansa lämpötilaa.
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664634-7f8825e3-f99c-4530-80c3-5265a70104c7.png)
 
