@@ -34,7 +34,7 @@ Alun perin oli vaikeaa saada data siirtymään Raspberrysta Azureen. Datan muoto
 ---
 
 
-Tämän jälkeen astuu kuvioon big datan lambda arkkitehtuuri, jonka mukaisesti rakensimme datalle cold path käsittelyn siten, että hyödynsimme siihen Azuren Data Factoryn Pipelinea. Pipeline louhii dataa blob storagen masterdatabasesta ja aggregaattorifunktion avulla siirtää haluamaamme tietoa tarjoilukerroksen NoSQL-databaseen, jonka toteutimme CosmosDB:llä. Tämän jälkeen dataa voisi tarjoilukerroksesta jakaa, vaikka verkkosivulle tai sovellukselle, mutta tähän meillä ei aika tässä työssä riitä.
+Tämän jälkeen astuu kuvioon big datan lambda arkkitehtuuri, jonka mukaisesti rakensimme datalle cold path käsittelyn siten, että hyödynsimme siihen Azuren Data Factoryn Pipelinea. Pipeline louhii dataa eräkerroksen blob storagen masterdatabasesta ja aggregaattorifunktion avulla siirtää haluamaamme tietoa tarjoilukerroksen NoSQL-databaseen, jonka toteutimme CosmosDB:llä. Tämän jälkeen dataa voisi tarjoilukerroksesta jakaa, vaikka verkkosivulle tai sovellukselle, mutta tähän meillä ei aika tässä työssä riitä.
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664637-7888e5bb-fce3-4b32-8f8a-b476d9d37b8f.png)
 
@@ -49,7 +49,7 @@ Työn tekemistä edes auttoi paljon, että löysimme Azuresta IAM ominaisuuden, 
 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664628-93c8825a-1961-4bac-8613-8fda230eb09a.png)
 
-Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat sekä miten yritysmaailmassa laajassa käytössä oleva Azure toimii. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
+Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja big datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat sekä miten yritysmaailmassa laajassa käytössä oleva Azure toimii. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
 
 ---
 
