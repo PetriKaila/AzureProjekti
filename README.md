@@ -28,7 +28,7 @@ Koodimme siis koostuu kahdesta esimerkki koodista, jotka yhdistimme ja muokkasim
 Alun perin oli vaikeaa saada data siirtymään Raspberrysta Azureen. Datan muoto myös oli ongelmallinen, sillä JSON tiedoston lämpötiladata näkyi Base64 muotona. Tähän löytyi jälleen kerran googlailemalla keino, jolla lämpötila data saatiin selkokieliseksi JSON tiedostoon, lisäämällä koodiin *content_encoding = "utf-8", content_type = "application/json".*
 
 ![image](https://user-images.githubusercontent.com/102190520/234672526-2cc02c19-8433-4a36-a22a-209bb5290f22.png)
-
+---
 
 
 Tämän jälkeen astuu kuvioon big datan lambda arkkitehtuuri, jonka mukaisesti rakensimme datalle cold path käsittelyn siten, että hyödynsimme siihen Azuren Data Factoryn Pipelinea. Pipeline louhii dataa blob storagen masterdatabasesta ja aggregaattorifunktion avulla siirtää haluamaamme tietoa tarjoilukerroksen NoSQL-databaseen, jonka toteutimme CosmosDB:llä. Tämän jälkeen dataa voisi tarjoilukerroksesta jakaa, vaikka verkkosivulle tai sovellukselle, mutta tähän meillä ei aika tässä työssä riitä.
@@ -46,8 +46,10 @@ Työn tekemistä edes auttoi paljon, että löysimme Azuresta IAM ominaisuuden, 
 ![projekti](https://user-images.githubusercontent.com/102190520/234664628-93c8825a-1961-4bac-8613-8fda230eb09a.png)
 
 Oppimiskokemuksena tämä työ on ollut laajasti silmiä avaava. Olemme oppineet paljon IoT laitteista ja datan käsittelystä. Erityisesti datan ominaisuudet ja käyttäytyminen ovat opettaneet meitä paljon ymmärtämään, miten suuret datamäärät toimivat. Tulevaisuudessa uskomme tämän harjoituksen oppien tulevan oikeasti käyttöönkin, sillä nämä samat toiminta tavat nimittäin toimivat erittäinkin isoillekin datamäärille. Meidän mielestämme opiskelijoiden parasta hyötyä ovat juuri nämä tulevaisuuden kannalta merkitykselliset rakennelmat.
+---
 
-lähteet: Stackoverflow, Microsoft, geeksforgeeks, OpenWeather koodi, dev.to datan lähetys
+lähteet: Stackoverflow, Microsoft, [geeksforgeeks OpenWeather koodi](https://www.geeksforgeeks.org/python-find-current-weather-of-any-city-using-openweathermap-api/), [dev.to datan lähetys](https://dev.to/nihalbaig0/stream-data-to-azure-iot-hub-from-raspberry-pi-1ed3)
+
 
 
 
